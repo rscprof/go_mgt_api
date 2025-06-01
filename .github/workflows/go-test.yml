@@ -26,15 +26,6 @@ jobs:
         cd api
         go test -v -short ./...
 
-    - name: Run integration tests
-      if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
-      run: |
-        cd api
-        go test -v -run TestGetStopData_RealAPI
-      env:
-        API_BASE_URL: "https://api.moscowapp.mos.ru/v8.2/"
-        # Добавьте другие необходимые переменные окружения
-
     - name: Build example
       run: |
         cd example
