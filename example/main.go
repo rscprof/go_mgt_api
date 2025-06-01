@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	api "github.com/rscprof/go_mgt_api"
+	api "github.com/rscprof/go_mgt_api/api"
 )
 
 func main() {
