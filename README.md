@@ -9,4 +9,4 @@
 
 ## Установка
 ```bash
-go get github.com/ваш-username/go_mgt_api
+go get github.com/rscprof/go_mgt_api/api

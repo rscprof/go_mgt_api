@@ -43,6 +43,9 @@ func isIntegrationTestEnabled() bool {
 //
 //	RUN_INTEGRATION_TESTS=true go test -v ./... -run TestGetStopData_RealAPI
 func TestGetStopData_RealAPI(t *testing.T) {
+	if testing.Short() {
+		t.Skip("Skipping integration test in short mode")
+	}
 	if !isIntegrationTestEnabled() {
 		t.Skip("Интеграционные тесты отключены. Для запуска установите RUN_INTEGRATION_TESTS=true")
 	}
